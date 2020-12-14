@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
      public LayerMask groundMask;
     // jumping multiplies by this value
     public float jumpheight = 2f;
+    // the vector for the player to be moving
+    public Vector3 move;
 
     
 
@@ -50,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         //not sure why this is transform.right and also forward 
-        Vector3 move = transform.right * x + transform.forward * z;
+        move = transform.right * x + transform.forward * z;
         //controller.Move is from the character controller
         controller.Move(move * speed * Time.deltaTime);
         // if grounded jumps when pressing space
