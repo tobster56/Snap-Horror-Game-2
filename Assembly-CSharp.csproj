@@ -626,6 +626,7 @@
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <HintPath>C:/Users/brent/OneDrive - Sint-Bavohumaniora Gent/Documenten/Snap_Horro_Game_222/Snap-Horror-Game-2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProGrids">
@@ -670,6 +671,8 @@
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/brent/OneDrive - Sint-Bavohumaniora Gent/Documenten/Snap_Horro_Game_222/Snap-Horror-Game-2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
 =======
+=======
+>>>>>>> Stashed changes
       <HintPath>F:/Repos/Snap-Horror-Game-2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProGrids">
@@ -713,6 +716,9 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>F:/Repos/Snap-Horror-Game-2/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     </Reference>
   </ItemGroup>
