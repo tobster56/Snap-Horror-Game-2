@@ -5,7 +5,7 @@ using UnityEngine;
 public class Generator : MonoBehaviour
 {
 
-    private bool _can;
+    public bool _can;
     public float genTimeWrench;
     public float genTimeJerry;
     public CollisionCheck collisionCheck;
@@ -16,8 +16,10 @@ public class Generator : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+       
         if (other.tag == "Player Trigger")
         {
+           
             _can = true;
         }
     }
@@ -32,6 +34,7 @@ public class Generator : MonoBehaviour
 
     private void Update()
     {
+        
         if (_can == true)
         {
             if ( Input.GetKeyDown(KeyCode.E))
@@ -60,7 +63,7 @@ public class Generator : MonoBehaviour
                 else if (collisionCheck.wrench == true)
                 {
                     GameObject.Find("Canvas").transform.Find("wrench Slider").gameObject.SetActive(false);
-                    GameObject.Find("Objects").transform.Find("wrench").gameObject.SetActive(false);
+                    GameObject.Find("FirstPersonPlayer").transform.Find("wrench").gameObject.SetActive(false);
                     collisionCheck.wrench = false;
 
 
@@ -77,7 +80,7 @@ public class Generator : MonoBehaviour
                 else if (collisionCheck.jerry == true)
                 {
                     collisionCheck.jerry = false;
-                    GameObject.Find("Objects").transform.Find("jerry").gameObject.SetActive(false);
+                    GameObject.Find("FirstPersonPlayer").transform.Find("jerry").gameObject.SetActive(false);
                     GameObject.Find("Canvas").transform.Find("jerry Slider").gameObject.SetActive(false);
                 }
 

@@ -50,10 +50,13 @@ public class tabletUI : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.C))
          {
+            
              currentTexture++;
              currentTexture %= textures.Length;
             GetComponent<Renderer>().material.mainTexture = textures[currentTexture];
-         }
+            Debug.Log("next");
+            Debug.Log(currentTexture);
+        }
 
       
     } 

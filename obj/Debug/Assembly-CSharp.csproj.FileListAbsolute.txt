@@ -270,3 +270,7 @@ F:\Repos\Snap-Horror-Game\Snap Horror Game\obj\Debug\Assembly-CSharp.csproj.Core
 F:\Repos\Snap-Horror-Game\Snap Horror Game\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 F:\Repos\Snap-Horror-Game\Snap Horror Game\obj\Debug\Assembly-CSharp.dll
 F:\Repos\Snap-Horror-Game\Snap Horror Game\obj\Debug\Assembly-CSharp.pdb
+F:\Repos\Snap-Horror-Game-2\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+F:\Repos\Snap-Horror-Game-2\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+F:\Repos\Snap-Horror-Game-2\obj\Debug\Assembly-CSharp.dll
+F:\Repos\Snap-Horror-Game-2\obj\Debug\Assembly-CSharp.pdb

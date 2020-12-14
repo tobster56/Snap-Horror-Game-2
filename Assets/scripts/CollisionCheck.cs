@@ -6,23 +6,27 @@ using UnityEngine.SceneManagement;
 public class CollisionCheck : MonoBehaviour
 {
     
-    private bool on = false;
+   public GameObject jerrycanobj;
+    public GameObject wrenchobj;
     public static bool lowSecurity = false;
     public static bool mediumSecurity = false;
     public static bool highSecurity = false;
     public static bool masterSecurity = false;
     public  bool jerry = false;
-    public  bool wrench = false;
+    public bool wrench = false;
+    public  bool siren = false;
     private bool pickUplow;
     private bool pickUpmed;
     private bool pickUphigh;
     private bool pickUpmas;
     private bool pickUpjerry;
     private bool pickUpwrench;
+    private bool ActivateSiren;
     public GameObject low;
     public GameObject med;
     public GameObject high;
     public GameObject mas;
+    public GameObject _siren;
     public GameObject _jerry;
     public GameObject _wrench;
 
@@ -63,8 +67,15 @@ public class CollisionCheck : MonoBehaviour
             if (col.gameObject.name == ("wrench") )
             {
 
-                Debug.Log("wrench false");
+                
                 pickUpwrench = false;
+
+            }
+            if (col.gameObject.name == ("siren"))
+            {
+
+                
+                ActivateSiren = false;
 
             }
         }
@@ -123,12 +134,19 @@ public class CollisionCheck : MonoBehaviour
                 pickUpwrench = true;
                
             }
+            if (col.gameObject.name == ("siren") && siren == false)
+            {
+                
+                ActivateSiren = true;
+
+            }
         }
     }
 
 
    private void Update()
     {
+        
         if (pickUplow == true)
         {
             if (Input.GetKeyDown(KeyCode.E))
@@ -165,12 +183,15 @@ public class CollisionCheck : MonoBehaviour
         }
         if (pickUpjerry == true)
         {
+            
             if (Input.GetKeyDown(KeyCode.E))
             {
                 jerry = true;
-                GameObject.Find("Objects").transform.Find("jerry").gameObject.SetActive(true);
+                jerrycanobj.SetActive(true);
                 Destroy(_jerry);
                 pickUpjerry = false;
+             
+
             }
         }
         if (pickUpwrench == true)
@@ -178,9 +199,23 @@ public class CollisionCheck : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 wrench = true;
-                GameObject.Find("Objects").transform.Find("wrench").gameObject.SetActive(true);
+                
                 Destroy(_wrench);
                 pickUpwrench = false;
+                wrenchobj.SetActive(true);
+
+            }
+        }
+        if (ActivateSiren == true)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+
+                siren = true;
+                GameObject.Find("Objects").transform.Find("siren").gameObject.SetActive(true);
+                
+                ActivateSiren = false;
+                
             }
         }
     }
